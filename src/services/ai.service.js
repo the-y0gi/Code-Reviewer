@@ -1,4 +1,4 @@
-const { GoogleGenerativeAI } = require("@google/generative-ai");
+import { GoogleGenerativeAI } from "@google/generative-ai";
 
 const genAI = new GoogleGenerativeAI(process.env.GOOGLE_GEMINI_KEY);
 const model = genAI.getGenerativeModel({
@@ -85,4 +85,4 @@ const generateContent = async (prompt) => {
   return result.response.text();
 };
 
-module.exports = generateContent;
+export default generateContent;

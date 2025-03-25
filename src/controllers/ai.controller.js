@@ -1,6 +1,6 @@
-const aiServices = require("../services/ai.service");
+import aiServices from "../services/ai.service.js"; // Add .js extension for ESM
 
-module.exports.getReview = async (req, res) => {
+const getReview = async (req, res) => {
   const code = req.body.code;
 
   if (!code) {
@@ -8,6 +8,8 @@ module.exports.getReview = async (req, res) => {
   }
 
   const response = await aiServices(code);
-
   res.send(response);
 };
+
+// Export using ES Module syntax
+export { getReview };

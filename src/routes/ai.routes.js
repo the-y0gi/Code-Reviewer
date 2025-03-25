@@ -1,8 +1,8 @@
-const express = require('express');
+import express from 'express';
+import { getReview } from '../controllers/ai.controller.js'; // Add .js extension for ESM
+
 const router = express.Router();
-const aiController = require('../controllers/ai.controller')
 
+router.post('/get-review', getReview);
 
-router.post('/get-review', aiController.getReview)
-
-module.exports = router;
+export default router; // Use `export default` instead of `module.exports`

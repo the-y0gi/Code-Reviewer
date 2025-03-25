@@ -2,6 +2,7 @@
   "name": "backend",
   "version": "1.0.0",
   "main": "server.js",
+  "type": "module",
   "scripts": {
     "setup-project": "npm i && cd frontend && npm i",
     "setup-production-app": "npm i && cd frontend && npm i && npm run build",
